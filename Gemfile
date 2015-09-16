@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
+gem 'bootstrap-sass'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -28,6 +29,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Use unicorn as the app server
 # gem 'unicorn'
+
+group :test do
+  gem 'minitest-reporters'
+  gem 'mini_backtrace'
+  #gem 'guard-minitest'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
