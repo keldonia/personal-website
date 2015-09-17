@@ -6,7 +6,7 @@ gem 'rails', '4.1.8'
 gem 'bootstrap-sass'
 gem 'actionview-encoded_mail_to'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -31,11 +31,21 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use unicorn as the app server
 # gem 'unicorn'
 
+group :development do
+  gem 'sqlite3'
+end
+
 group :test do
   gem 'minitest-reporters'
   gem 'mini_backtrace'
   #gem 'guard-minitest'
 end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
